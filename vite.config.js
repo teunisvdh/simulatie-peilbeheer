@@ -8,5 +8,5 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: '/simulatie-peilbeheer'
+  base: '/simulatie-peilbeheer/'
 })

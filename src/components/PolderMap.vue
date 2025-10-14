@@ -202,7 +202,7 @@ const setSelectedStyle = (layer) => {
 const loadPolders = async () => {
   try {
     console.log('Fetching polders.json...')
-    const response = await fetch('/polders.json')
+    const response = await fetch(`${import.meta.env.BASE_URL}polders.json`)
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
