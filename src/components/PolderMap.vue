@@ -4,23 +4,50 @@
     <!-- Full Screen Map -->
     <div id="map" class="w-full h-full z-10"></div>
 
-    <a href="https://waternatuurlijk.nl/" class="fixed bottom-4 left-4 w-12 z-20">
+    <a href="https://waternatuurlijk.nl/" class="fixed bottom-4 left-4 w-36 z-20">
       <img src="/logo_water_natuurlijk.svg"></img>
     </a>
-    
+
+    <!-- Legend -->
+    <div class="fixed top-24 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 z-20">
+      <h4 class="text-sm font-semibold text-gray-800 mb-3">Drooglegging</h4>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-4 rounded" style="background-color: #006400"></div>
+          <span class="text-xs text-gray-700">≤ 40 cm (Goed)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-4 rounded" style="background-color: #FFFF00"></div>
+          <span class="text-xs text-gray-700">40-50 cm</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-4 rounded" style="background-color: #FFA500"></div>
+          <span class="text-xs text-gray-700">50-60 cm</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-4 rounded" style="background-color: #FF4500"></div>
+          <span class="text-xs text-gray-700">60-70 cm</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-4 rounded" style="background-color: #FF0000"></div>
+          <span class="text-xs text-gray-700">≥ 70 cm (Risico)</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Control Panel -->
-    <ControlPanel 
+    <ControlPanel
       @yearChange="onYearChange"
       @peilindexatieChange="onPeilindexatieChange"
     />
-    
+
     <!-- Animation Panel -->
-    <div 
-      v-if="selectedPolder != null" 
+    <div
+      v-if="selectedPolder != null"
       class="fixed top-80 bottom-4 right-4 w-80 flex justify-center items-center z-50"
     >
       <div class="w-full h-full">
-        <AnimationPanel 
+        <AnimationPanel
           :polderData="selectedPolder"
           :currentYear="currentYear"
           :peilindexatie="currentPeilindexatie"
