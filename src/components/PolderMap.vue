@@ -4,7 +4,7 @@
     <!-- Full Screen Map -->
     <div id="map" class="w-full h-full z-10"></div>
 
-    <a href="https://waternatuurlijk.nl/" class="fixed bottom-4 left-4 w-36 z-20">
+    <a href="https://waternatuurlijk.nl/" class="fixed bottom-4 left-4 w-18 lg:w-24 z-20">
       <img src="/logo_water_natuurlijk.svg"></img>
     </a>
 
@@ -35,26 +35,27 @@
       </div>
     </div>
 
-    <!-- Control Panel -->
-    <ControlPanel
-      @yearChange="onYearChange"
-      @peilindexatieChange="onPeilindexatieChange"
-    />
 
-    <!-- Animation Panel -->
-    <div
-      v-if="selectedPolder != null"
-      class="fixed top-80 bottom-4 right-4 w-80 flex justify-center items-center z-50"
-    >
-      <div class="w-full h-full">
-        <AnimationPanel
-          :polderData="selectedPolder"
-          :currentYear="currentYear"
-          :peilindexatie="currentPeilindexatie"
-          @close="closeAnimation"
-        />
-      </div>
+    <div class="fixed top-4 right-4 w-86 space-y-4 z-40">
+
+      <!-- Control Panel -->
+      <ControlPanel
+        :selectedPolder="selectedPolder"
+        @yearChange="onYearChange"
+        @peilindexatieChange="onPeilindexatieChange"
+      />
+
+      <!-- Animation Panel -->
+      <AnimationPanel
+        v-if="selectedPolder != null"
+        :polderData="selectedPolder"
+        :currentYear="currentYear"
+        :peilindexatie="currentPeilindexatie"
+        @close="closeAnimation"
+      />
+
     </div>
+
   </div>
 </template>
 
