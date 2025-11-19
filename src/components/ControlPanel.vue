@@ -110,7 +110,7 @@ const isExpanded = ref(true)
 
 // Watch for selectedPolder changes
 watch(() => props.selectedPolder, (newValue) => {
-  if (newValue !== null && window.innerWidth < 1024) {
+  if (newValue !== null && window.innerWidth < 1536) {
     // Collapse on small screens when a polder is selected
     isExpanded.value = false
   }
