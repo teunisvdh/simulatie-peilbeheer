@@ -14,7 +14,7 @@
       <div class="space-y-2">
         <div class="flex items-center gap-2">
           <div class="w-6 h-4 rounded" style="background-color: #006400"></div>
-          <span class="text-xs text-gray-700">≤ 40 cm (Goed)</span>
+          <span class="text-xs text-gray-700">≤ 40 cm</span>
         </div>
         <div class="flex items-center gap-2">
           <div class="w-6 h-4 rounded" style="background-color: #FFFF00"></div>
@@ -30,7 +30,7 @@
         </div>
         <div class="flex items-center gap-2">
           <div class="w-6 h-4 rounded" style="background-color: #FF0000"></div>
-          <span class="text-xs text-gray-700">≥ 70 cm (Risico)</span>
+          <span class="text-xs text-gray-700">≥ 70 cm</span>
         </div>
       </div>
     </div>
